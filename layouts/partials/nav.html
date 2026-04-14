@@ -1,0 +1,7 @@
+<ul>
+  {{ range .Site.Menus.nav }}
+  <li>
+    <a href="{{ .URL }}"{{ if eq $.RelPermalink .URL }} class="active"{{ end }}>{{ .Name }}</a>
+  </li>
+  {{ end }}
+</ul>

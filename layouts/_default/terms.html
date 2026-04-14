@@ -1,0 +1,8 @@
+{{ define "main" }}
+<h2 style="color: var(--red); margin-bottom: 1.5rem; font-size: 1.3rem;">{{ .Title }}</h2>
+<div class="tag-list" style="max-width: 100%;">
+  {{ range .Data.Terms.Alphabetical }}
+  <a href="{{ .Page.RelPermalink }}" class="tag">{{ .Page.Title }} ({{ .Count }})</a>
+  {{ end }}
+</div>
+{{ end }}

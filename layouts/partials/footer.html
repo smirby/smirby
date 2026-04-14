@@ -1,0 +1,8 @@
+<footer class="site-footer">
+  <span>© {{ now.Format "2006" }} {{ .Site.Params.copyrightHolder }}</span>
+  <div class="footer-links">
+    {{ range .Site.Menus.footer }}
+    <a href="{{ .URL }}">{{ .Name }}</a>
+    {{ end }}
+  </div>
+</footer>

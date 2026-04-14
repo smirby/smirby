@@ -1,7 +1,6 @@
 baseURL = 'https://smirby.com/'
 languageCode = 'en-us'
 title = 'Richard K. Smith'
-theme = 'hugo-tufte'
 
 [params]
   subtitle = 'Professor, School of Communication · Simon Fraser University'

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode | default "en" }}">
+<head>
+  {{ partial "head.html" . }}
+</head>
+<body>
+  <div class="page-outer">
+    {{ partial "site-header.html" . }}
+    <div class="page-body">
+      <nav class="site-nav">
+        {{ partial "nav.html" . }}
+      </nav>
+      <main>
+        {{ block "main" . }}{{ end }}
+      </main>
+    </div>
+    {{ partial "footer.html" . }}
+  </div>
+</body>
+</html>
