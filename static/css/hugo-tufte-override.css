@@ -1,0 +1,146 @@
+/* ============================================================
+   smirby.com — SFU palette override for hugo-tufte
+   Primary:   #A6192E  (SFU dark red)
+   Accent:    #CC0633  (SFU bright red)
+   ============================================================ */
+
+/* --- Fonts: match SFU page system stack -------------------- */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+               'Helvetica Neue', Arial, sans-serif;
+  background: #fafafa;
+  color: #333;
+}
+
+/* --- Site header / brand ----------------------------------- */
+header.brand {
+  background: #A6192E;
+  color: white;
+  padding: 1.8rem 2rem 1.4rem;
+  margin-bottom: 0;
+}
+
+header.brand h1 {
+  color: white;
+  font-size: 1.8rem;
+  font-weight: 600;
+  font-style: normal;
+  margin-bottom: 0.15rem;
+}
+
+header.brand h2 {
+  color: rgba(255,255,255,0.88);
+  font-size: 0.95rem;
+  font-weight: 400;
+  font-style: normal;
+  border: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+/* --- Navigation -------------------------------------------- */
+nav.group a,
+header.brand nav a {
+  color: rgba(255,255,255,0.9);
+  font-size: 0.9rem;
+  margin-right: 1.4rem;
+  text-decoration: none;
+  border-bottom: none;
+}
+
+nav.group a:hover,
+header.brand nav a:hover {
+  color: white;
+  border-bottom: 2px solid rgba(255,255,255,0.6);
+}
+
+/* --- Links ------------------------------------------------- */
+a, a:visited {
+  color: #A6192E;
+}
+
+a:hover {
+  color: #CC0633;
+}
+
+/* Tufte uses a special link style; keep it but recolour */
+article a, article a:visited {
+  color: #A6192E;
+  text-decoration: none;
+  border-bottom: 1px solid #d4a0a8;
+}
+
+article a:hover {
+  color: #CC0633;
+  border-bottom: 1px solid #A6192E;
+}
+
+/* --- Headings ---------------------------------------------- */
+h1, h2, h3 {
+  font-weight: 600;
+  font-style: normal;
+}
+
+article h2 {
+  color: #A6192E;
+  padding-bottom: 0.4rem;
+  border-bottom: 2px solid #eee;
+}
+
+/* --- Sidenotes and margin notes: tuck close, subtle -------- */
+.sidenote, .marginnote {
+  font-size: 0.82rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+.sidenote-number:after,
+.sidenote:before {
+  color: #A6192E;
+}
+
+/* --- Block quotes and epigraphs ---------------------------- */
+blockquote, blockquote p {
+  border-left: 4px solid #A6192E;
+  color: #555;
+}
+
+/* --- Post/content list ------------------------------------- */
+.content-listing .listing {
+  border-bottom: 1px solid #eee;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* --- Footer ------------------------------------------------ */
+footer.page-footer {
+  background: white;
+  border-top: 2px solid #eee;
+  padding: 1.5rem 0;
+  font-size: 0.85rem;
+  color: #888;
+}
+
+footer.page-footer a {
+  color: #A6192E;
+  border-bottom: none;
+}
+
+footer.page-footer ul.page-footer-menu li {
+  display: inline;
+  margin-right: 1.5rem;
+}
+
+/* --- Responsive: stack nav on small screens ---------------- */
+@media (max-width: 640px) {
+  header.brand {
+    padding: 1.2rem 1rem 1rem;
+  }
+  header.brand h1 {
+    font-size: 1.4rem;
+  }
+  nav.group a {
+    display: inline-block;
+    margin-bottom: 0.3rem;
+  }
+}

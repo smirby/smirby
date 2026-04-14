@@ -1,3 +1,54 @@
-baseURL = 'https://example.org/'
-locale = 'en-us'
-title = 'My New Hugo Project'
+baseURL = 'https://smirby.com/'
+languageCode = 'en-us'
+title = 'Richard K. Smith'
+theme = 'hugo-tufte'
+
+[params]
+  subtitle = 'Professor, School of Communication · Simon Fraser University'
+  copyrightHolder = 'Richard K. Smith'
+  showPoweredBy = false
+  math = false
+
+# Navigation menu
+[[menu.nav]]
+  name = "Home"
+  weight = 1
+  identifier = "home"
+  url = "/"
+
+[[menu.nav]]
+  name = "Writing"
+  weight = 2
+  identifier = "writing"
+  url = "/post/"
+
+[[menu.nav]]
+  name = "About"
+  weight = 3
+  identifier = "about"
+  url = "/about/"
+
+[[menu.nav]]
+  name = "SFU"
+  weight = 4
+  identifier = "sfu"
+  url = "https://www.sfu.ca/~smith/"
+
+# Footer menu
+[[menu.footer]]
+  name = "smith@sfu.ca"
+  weight = 1
+  identifier = "email"
+  url = "mailto:smith@sfu.ca"
+
+[[menu.footer]]
+  name = "Google Scholar"
+  weight = 2
+  identifier = "scholar"
+  url = "https://scholar.google.com/citations?hl=en&user=t51O7g0AAAAJ"
+
+[[menu.footer]]
+  name = "SFU Profile"
+  weight = 3
+  identifier = "sfuprofile"
+  url = "https://www.sfu.ca/~smith/"
