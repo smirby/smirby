@@ -5,7 +5,7 @@
 <meta property="og:title" content="{{ .Title }}">
 <meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}">
 <meta property="og:url" content="{{ .Permalink }}">
-<link rel="stylesheet" href="{{ "/css/smirby.css" | absURL }}">
+<link rel="stylesheet" href="/css/smirby.css">
 {{ if .Params.math }}
 <script>MathJax = { tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$'],['\\[','\\]']] } };</script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
