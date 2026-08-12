@@ -1,0 +1,75 @@
+{
+  "id": "gemini-3-1-pro",
+  "name": "Gemini 3.1 Pro",
+  "system_type": "model",
+  "scoring_mode": "realized",
+  "summary": "Gemini 3.1 Pro is Google DeepMind’s flagship multimodal reasoning model for complex tasks, deployed across a wide range of Google products and APIs. It demonstrates strong reasoning, long-context processing, and tool-use competence, but does not show evidence of persistent, self-continuing autonomous behavior without external agent orchestration.",
+  "scores": {
+    "agii": 1.5,
+    "casx": 2.9,
+    "trajectory": "Very Large"
+  },
+  "boundary": "Below boundary",
+  "primary_interpretation": {
+    "driver": "Frontier-level multimodal reasoning combined with native tool pathways and broad deployment across Google platforms",
+    "constraint": "Lack of persistent, self-directed execution by the model itself; multi-step behavior remains session-bounded without agent wrappers"
+  },
+  "explanations": {
+    "agii": {
+      "evidence": "Gemini 3.1 Pro supports multi-step reasoning, tool use, and iterative workflows within single API calls. However, Google’s documentation distinguishes between models and agents, with persistent or background execution only supported in agent layers rather than the model itself.",
+      "interpretation": "The model realizes bounded multi-step behavior and tool-driven iteration, but not durable persistence across time. Its ‘agentic’ capabilities are better understood as structured reasoning and tool use within sessions rather than independent continuation.",
+      "implication": "AGII is above simple chat systems due to chaining and tool use, but remains low relative to systems that independently resume or sustain tasks over time."
+    },
+    "casx": {
+      "evidence": "Gemini 3.1 Pro supports multimodal inputs, long context, code execution, function calling, search grounding, RAG, and integration across Google products such as Vertex AI and the Gemini app. It can act through built-in tools and developer-defined functions.",
+      "interpretation": "The model has substantial real-world effect potential when embedded in workflows, combining strong reasoning with access to tools and large-scale deployment surfaces.",
+      "implication": "CASX is high for a standalone model because it can materially affect software systems, data workflows, and user decisions, though still gated by permissions and orchestration."
+    },
+    "trajectory": {
+      "evidence": "Gemini 3.1 Pro represents a rapid iteration over Gemini 3, with strong benchmark improvements and expanding deployment across Google’s ecosystem. Tooling, integration, and capability surfaces are growing quickly.",
+      "interpretation": "The rate of improvement and deployment expansion suggests rapid movement toward more capable and integrated systems, even if current autonomy remains limited.",
+      "implication": "Trajectory is Very Large because incremental improvements in autonomy, memory, and tool integration could significantly increase both AGII and CASX in the near term."
+    }
+  },
+  "change_levers": {
+    "increase_risk": "Adding persistent memory, background execution, broader default tool permissions, and tighter integration into workflows would increase AGII and CASX.",
+    "decrease_risk": "Maintaining session-bounded execution, restricting tool access, requiring explicit invocation, and strengthening safety controls would reduce risk."
+  },
+  "classification_notes": {
+    "where_risk_determined": "design, training, and deployment",
+    "where_risk_triggered": "usage context, especially when connected to tools, enterprise data, or high-stakes workflows",
+    "inevitable_under_normal_use": "Conditional — strong capability is intrinsic, but higher AGII and CASX depend on deployment choices and agent wrapping"
+  },
+  "sources": [
+    {
+      "title": "Gemini 3.1 Pro Model Card",
+      "url": "https://deepmind.google/models/model-cards/gemini-3-1-pro/"
+    },
+    {
+      "title": "Gemini API Docs",
+      "url": "https://ai.google.dev/gemini-api/docs/models/gemini-3.1-pro-preview"
+    },
+    {
+      "title": "Gemini 3 Announcement",
+      "url": "https://blog.google/products-and-platforms/products/gemini/gemini-3/"
+    }
+  ],
+  "confidence": "Medium",
+  "main_uncertainty": "The extent to which observed agent-like behavior in Google products reflects the base model versus external orchestration layers and specialized agent systems.",
+  "metadata": {
+    "source_markdown_file": "AI Risk Map - Gemini 3.1.md",
+    "version": 1,
+    "created_at": "2026-04-17",
+    "updated_at": "2026-04-17",
+    "tags": [
+      "model",
+      "google",
+      "multimodal",
+      "frontier",
+      "impact-global",
+      "mode-cascading"
+    ]
+  },
+  "impact_scale": "global",
+  "impact_mode": "cascading"
+}

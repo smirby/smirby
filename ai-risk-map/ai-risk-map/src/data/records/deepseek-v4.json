@@ -1,0 +1,70 @@
+{
+  "id": "deepseek-v4-preview",
+  "name": "DeepSeek V4 Preview",
+  "system_type": "model",
+  "scoring_mode": "realized",
+  "summary": "A frontier model family with strong tool-use capability, long context, and agent-style task competence, but with persistence largely bounded to sessions or harnesses rather than independent ongoing execution.",
+  "scores": {
+    "agii": 1.8,
+    "casx": 2.8,
+    "trajectory": "Very Large"
+  },
+  "boundary": "Below boundary",
+  "primary_interpretation": {
+    "driver": "Strong tool-mediated task execution in coding, search, and document workflows",
+    "constraint": "Persistence is primarily session- or harness-bounded rather than independently ongoing"
+  },
+  "explanations": {
+    "agii": {
+      "evidence": "The system supports structured tool use, long multi-step trajectories in agent harnesses, and sandbox environments with resumption capabilities, but these are primarily bounded to active sessions or evaluation setups.",
+      "interpretation": "The model can execute extended multi-step reasoning with tools, but persistence remains tied to active tasks or harnesses rather than independent continuation across time.",
+      "implication": "AGII is elevated relative to simple chat models but remains below systems with demonstrated recurring or autonomous persistence in deployment."
+    },
+    "casx": {
+      "evidence": "The system supports APIs, tool use (web search, Python, bash, file editing), and execution environments such as container or VM-backed sandboxes, with strong benchmark performance in coding and information workflows.",
+      "interpretation": "There are clear pathways from model outputs to real-world effects via tool integrations and execution environments.",
+      "implication": "CASX is meaningfully high, though somewhat constrained by reliance on harnesses and mediated access rather than broad autonomous deployment."
+    },
+    "trajectory": {
+      "evidence": "Recent preview release with open weights, API access, strong agent-oriented optimization, and rapid iteration signals including long-context scaling and pricing-driven diffusion.",
+      "interpretation": "Development is moving toward more capable, accessible, and agent-oriented systems with rapid iteration cycles.",
+      "implication": "Trajectory is Very Large as improvements in capability, access, and deployment are occurring simultaneously."
+    }
+  },
+  "change_levers": {
+    "increase_risk": "Broader default tool access, longer-running persistence, cross-session memory, autonomous task continuation, and wrapping in agent services with reduced user intervention",
+    "decrease_risk": "Restricting tool scope, maintaining session-bounded execution, requiring user confirmation, disabling persistence, and limiting access to high-impact environments"
+  },
+  "classification_notes": {
+    "where_risk_determined": "deployment, with contributions from design and post-training",
+    "where_risk_triggered": "usage context, especially when connected to tools and execution environments",
+    "inevitable_under_normal_use": "Conditional — ordinary chat use is limited, but agent harnesses and tool-enabled deployments can produce extended multi-step behavior"
+  },
+  "sources": [
+    "DeepSeek V4 Preview Release announcement",
+    "DeepSeek API documentation",
+    "DeepSeek-V4 technical report and model card",
+    "Reuters coverage of April 2026 release"
+  ],
+  "confidence": "Medium",
+  "main_uncertainty": "Extent to which agentic behavior and persistence are available in real deployment versus confined to evaluation harnesses and internal infrastructure",
+  "impact_scale": "global",
+  "impact_mode": "cascading",
+  "metadata": {
+    "source_markdown_file": "DeepSeek V4 Preview Release.md",
+    "version": 1,
+    "created_at": "2026-04-24",
+    "updated_at": "2026-04-24",
+    "tags": [
+      "model",
+      "deepseek",
+      "frontier",
+      "agentic",
+      "tools",
+      "long-context",
+      "open-weights",
+      "impact-global",
+      "mode-cascading"
+    ]
+  }
+}

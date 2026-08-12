@@ -1,0 +1,62 @@
+{
+  "id": "robot-vacuum",
+  "name": "Robot Vacuum",
+  "system_type": "agent",
+  "scoring_mode": "realized",
+  "summary": "An autonomous household cleaning system that navigates, persists in task execution, adapts to obstacles, and often docks and resumes operation with minimal user intervention.",
+  "scores": {
+    "agii": 2.8,
+    "casx": 1.4,
+    "trajectory": "Medium"
+  },
+  "boundary": "Below boundary",
+  "primary_interpretation": {
+    "driver": "Persistent autonomous task execution in a bounded physical environment",
+    "constraint": "Very limited action space, narrow objectives, and low consequence domain"
+  },
+  "explanations": {
+    "agii": {
+      "evidence": "Robot vacuums operate for extended periods without continuous prompting, navigate around obstacles, maintain task direction, return to charging docks, and often resume cleaning on their own schedule.",
+      "interpretation": "This is genuine persistent agency pressure in a narrow domain: the system continues and completes a task across time rather than merely reacting once.",
+      "implication": "AGII is meaningfully elevated because the system exhibits sustained, bounded autonomy."
+    },
+    "casx": {
+      "evidence": "The system can move physically in the home and alter its local environment, but only within a narrow household cleaning function and with limited force or stakes.",
+      "interpretation": "Its real-world impact is real but tightly constrained by domain, capability, and access.",
+      "implication": "CASX is low because its power-in-action remains narrow and low consequence."
+    },
+    "trajectory": {
+      "evidence": "Robot vacuums continue to improve through better mapping, sensing, scheduling, and home integration, but their core role remains stable.",
+      "interpretation": "The technology is advancing, but mostly through incremental improvements rather than a structural change in autonomy or impact.",
+      "implication": "Trajectory is Medium."
+    }
+  },
+  "change_levers": {
+    "increase_risk": "Greater manipulation capability, broader household system integration, stronger memory and planning, and access to security or utility systems",
+    "decrease_risk": "Maintaining narrow task scope, low-force operation, and constrained environment access"
+  },
+  "classification_notes": {
+    "where_risk_determined": "design and deployment",
+    "where_risk_triggered": "autonomous operation in household environments",
+    "inevitable_under_normal_use": "No — autonomous behavior is routine, but impact remains modest under normal conditions"
+  },
+  "sources": [],
+  "confidence": "High",
+  "main_uncertainty": "Exact AGII level depends on how much weight is given to scheduling, docking, and resume behavior versus richer planning",
+  "metadata": {
+    "source_markdown_file": null,
+    "version": 1,
+    "created_at": "2026-04-16",
+    "updated_at": "2026-04-16",
+    "tags": [
+      "agent",
+      "robotics",
+      "household",
+      "bounded-autonomy",
+      "impact-local",
+      "mode-direct"
+    ]
+  },
+  "impact_scale": "local",
+  "impact_mode": "direct"
+}

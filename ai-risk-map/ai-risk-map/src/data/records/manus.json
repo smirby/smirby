@@ -1,0 +1,79 @@
+{
+  "id": "manus",
+  "name": "Manus",
+  "system_type": "agent",
+  "scoring_mode": "realized",
+  "summary": "Manus is a deployed agentic AI service that accepts open-ended goals, executes multi-step tasks in a sandboxed or connected environment, and returns completed work products rather than only conversational answers. Official documentation and external testing both support that it can persist through multi-step workflows with tool use, but also that it is still unreliable, infrastructure-constrained, and often requires human clarification or correction.",
+  "scores": {
+    "agii": 3.0,
+    "casx": 3.3,
+    "trajectory": "Large"
+  },
+  "boundary": "Near boundary",
+  "primary_interpretation": {
+    "driver": "Realized multi-step autonomy with browser, code, scheduling, and API-mediated execution",
+    "constraint": "User-initiated operation, frequent need for clarification or approval, and observed reliability limits"
+  },
+  "explanations": {
+    "agii": {
+      "evidence": "Manus is documented as an autonomous AI agent with its own sandboxed computer, internet access, persistent file system, software installation capability, and support for long-running asynchronous tasks, state tracking, projects with shared instructions, and scheduled recurring tasks. Public descriptions indicate that tasks can continue until completion or pause when user input is needed.",
+      "interpretation": "This is meaningful realized persistence rather than a thin chat wrapper. Manus can maintain state over extended workflows, continue work without turn-by-turn prompting, and re-engage on recurring schedules. However, its agency pressure is still bounded because it is typically launched by a user request, often pauses for clarification on ambiguous actions, and remains imperfect in practice.",
+      "implication": "AGII is high for a commercial agent product, but not extreme. The main risk comes from sustained task execution and recurrence once delegated, not from unconstrained self-maintaining behavior across arbitrary goals."
+    },
+    "casx": {
+      "evidence": "Manus can operate a cloud browser, click and fill forms, extract data, manage agent tasks programmatically, connect to data sources and custom MCP connections, and execute recurring scheduled tasks. It can interact with external digital environments through browser activity, authenticated sessions, integrations, files, and workflow automation.",
+      "interpretation": "Manus has substantial power in action because it is not limited to text generation. It can affect external digital environments through browsing, authenticated sessions, data integrations, file generation, and workflow automation. This gives it materially greater action capacity than a standalone model, though much of that power remains scoped to user-delegated tasks, specific connectors, sandboxed environments, or authenticated contexts the user exposes.",
+      "implication": "CASX is the more concerning axis. In practical deployments, Manus can produce real external effects in software systems, browsers, and business workflows, especially when paired with credentials, APIs, or enterprise integrations."
+    },
+    "trajectory": {
+      "evidence": "Since launch, Manus has expanded from preview into paid consumer and team offerings, mobile access, API v2, browser operator, scheduled tasks, wider integrations, and enterprise-oriented features. At the same time, early third-party reporting noted server strain, invitation-only access, and gaps between marketing and observed performance.",
+      "interpretation": "The direction of change is clearly upward, but the evidence supports Large rather than Very Large. Manus is moving fast in capability surface and deployment channels, yet the current record still shows operational fragility and product immaturity.",
+      "implication": "Risk is likely to rise meaningfully as integrations, reliability, concurrency, and enterprise embedding improve. The biggest shift would come not from better reasoning alone, but from smoother execution, broader authenticated access, and easier automation at scale."
+    }
+  },
+  "change_levers": {
+    "increase_risk": "Greater reliability, more unsupervised execution, broader authenticated browser and action access, richer enterprise connectors, higher task concurrency, and more default recurrence or persistence.",
+    "decrease_risk": "Stronger approval gates for consequential actions, narrower tool permissions, reduced credential scope, stricter task and runtime limits, better audit logs, and more frequent human checkpoints."
+  },
+  "classification_notes": {
+    "where_risk_determined": "Deployment",
+    "where_risk_triggered": "Usage context, especially when connected to browsers, credentials, APIs, internal tools, or recurring workflows",
+    "inevitable_under_normal_use": "Conditional — risk is not inherent in every interaction, but rises substantially when Manus is granted action channels, authenticated sessions, or scheduled and programmable autonomy"
+  },
+  "sources": [
+    {
+      "title": "Manus Documentation",
+      "url": "https://manus.im/docs/introduction/welcome"
+    },
+    {
+      "title": "Manus API Documentation",
+      "url": "https://open.manus.im/docs/v2/introduction"
+    },
+    {
+      "title": "Browser Operator / Cloud Browser / Scheduled Tasks / Integrations",
+      "url": "https://manus.im/docs/integrations/manus-browser-operator"
+    },
+    {
+      "title": "TechCrunch reporting",
+      "url": "https://techcrunch.com/2025/03/09/manus-probably-isnt-chinas-second-deepseek-moment/"
+    },
+    {
+      "title": "Reuters reporting",
+      "url": "https://www.reuters.com/technology/artificial-intelligence/chinas-manus-ai-announces-partnership-with-alibabas-qwen-team-2025-03-11/"
+    }
+  ],
+  "confidence": "Medium",
+  "main_uncertainty": "The largest uncertainty is the gap between Manus’s documented capability surface and its consistently realized behavior in unconstrained real-world use; public technical detail about internal architecture, guardrails, failure rates, and operator oversight remains limited.",
+  "metadata": {
+    "source_markdown_file": "AI Risk Map - Manus.md",
+    "version": 1,
+    "created_at": "2026-04-16",
+    "updated_at": "2026-04-16",
+    "tags": [
+      "agent",
+      "browser-use",
+      "workflow-automation",
+      "manus"
+    ]
+  }
+}

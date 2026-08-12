@@ -1,0 +1,84 @@
+{
+  "id": "claude-mythos-preview",
+  "name": "Claude Mythos Preview",
+  "system_type": "model",
+  "scoring_mode": "realized",
+  "summary": "Claude Mythos Preview is a frontier Anthropic model deployed in limited internal and research-preview settings, with especially strong documented performance on long, scaffolded cybersecurity tasks. Re-evaluating AGII strictly as persistent agency pressure, the key question is not safety posture but whether Mythos continues, plans, and carries tasks forward with less steering than Claude Opus 4.7.",
+  "scores": {
+    "agii": 2.5,
+    "casx": 3.1,
+    "trajectory": "Very Large"
+  },
+  "boundary": "Below boundary",
+  "primary_interpretation": {
+    "driver": "Documented hour/day-scale scaffolded autonomy with reduced need for human steering on technical tasks",
+    "constraint": "Persistence appears scaffold-bounded and deployment-specific rather than open-ended across time by default"
+  },
+  "explanations": {
+    "agii": {
+      "evidence": "Relative to Opus 4.7, Mythos has stronger public evidence of sustained task continuation with minimal intervention. For Opus 4.7, Anthropic says it is highly autonomous, performs well on long-horizon agentic work, is better at file-system memory across multi-session work, needs less step-by-step guidance than Opus 4.6, and provides better progress updates during long traces; however, Anthropic also notes Opus 4.7 tends to use fewer tools and spawn fewer subagents by default unless steered by effort settings or prompting. For Mythos, Anthropic says it is used extensively as an autonomous agent, including in settings with and without high-frequency human interaction; it is often used for hour-long or day-long tasks; internal use often involves greater affordances and less frequent human interaction than prior models; Anthropic staff have asked it to find exploits overnight; and Anthropic reports cases where scaffolds let it turn vulnerabilities into exploits without any human intervention after the initial prompt.",
+      "interpretation": "On persistence across time, Mythos appears slightly stronger than Opus 4.7 in the available evidence: Opus 4.7 clearly supports long-horizon and multi-session work, but Mythos is the one explicitly documented as running hour/day-scale autonomous tasks and overnight exploit workflows with reduced human interaction. On need for steering, Opus 4.7 still appears more harness-sensitive: Anthropic’s migration guide highlights effort calibration, literal instruction-following, fewer tool calls by default, and steerable subagent behavior, all of which imply that strong continuation often depends on harness tuning. Mythos, by contrast, is described in actual internal use as receiving less frequent human interaction than prior models and completing some exploit-development runs end-to-end once started. Still, Mythos does not show evidence of persistent self-initiated recurrence across sessions; its agency pressure is real but remains scaffolded rather than independently self-sustaining.",
+      "implication": "Strictly on AGII, Mythos should score above Opus 4.7, but only modestly above it. The difference is not that Mythos is more generally intelligent or better aligned; it is that the published record shows somewhat stronger realized task persistence, lower apparent need for continuous steering, and clearer examples of independent continuation once a bounded task is launched."
+    },
+    "casx": {
+      "evidence": "Anthropic reports that Mythos autonomously identified and exploited zero-day vulnerabilities across major operating systems and browsers, wrote complex exploit chains, and in some cases produced working exploits after hours of autonomous scanning. Anthropic also documents tool-rich Claude environments more generally, including bash, code execution, computer use, text editing, web search, web fetch, MCP connectors, and memory.",
+      "interpretation": "CASX remains high because Mythos is not merely persistent in conversation; it can produce consequential outputs in real technical environments. The score is still moderated by the fact that deployment is limited and not generally available.",
+      "implication": "Mythos has substantial power-in-action in practice, especially in cyber contexts, even if current access controls narrow the population of users who can realize that power."
+    },
+    "trajectory": {
+      "evidence": "Anthropic describes Mythos as a major capability jump over Opus 4.6 in autonomous exploit development, while Opus 4.7 is described as a step-change over Opus 4.6 in agentic coding and long-horizon work. Anthropic’s own descriptions emphasize rapid recent gains rather than a plateau.",
+      "interpretation": "The direction of change is upward on both capability and sustained agentic performance. Even with conservative scoring, the comparative evidence suggests frontier Claude models are moving toward longer-running, less supervised execution.",
+      "implication": "Trajectory remains Very Large because future Claude-class systems are likely to combine Opus-style general agentic usability with Mythos-style stronger bounded autonomy on technically difficult tasks."
+    }
+  },
+  "change_levers": {
+    "increase_risk": "Longer default task horizons, stronger cross-session memory, more permissive tool use, reduced interruption points, and broader external deployment",
+    "decrease_risk": "Shorter task budgets, more required confirmations, weaker tool permissions, less retained state, and tighter limits on unattended runs"
+  },
+  "classification_notes": {
+    "where_risk_determined": "design, training, deployment",
+    "where_risk_triggered": "scaffolded technical workflows, especially long-running cyber or coding tasks with tools",
+    "inevitable_under_normal_use": "Conditional — the persistence is real, but the strongest AGII evidence comes from bounded agentic setups rather than default unconstrained interaction"
+  },
+  "sources": [
+    {
+      "title": "Anthropic, Introducing Claude Opus 4.7",
+      "url": "https://www.anthropic.com/news/claude-opus-4-7"
+    },
+    {
+      "title": "Anthropic Docs, Models overview",
+      "url": "https://docs.anthropic.com/en/docs/about-claude/models"
+    },
+    {
+      "title": "Anthropic Docs, Migration guide / Migrating to Claude Opus 4.7",
+      "url": "https://docs.anthropic.com/en/docs/about-claude/models/migrating-to-claude-4"
+    },
+    {
+      "title": "Anthropic, Alignment Risk Update: Claude Mythos Preview",
+      "url": "https://anthropic.com/claude-mythos-preview-risk-report"
+    },
+    {
+      "title": "Anthropic Frontier Red Team, Assessing Claude Mythos Preview’s cybersecurity capabilities",
+      "url": "https://red.anthropic.com/2026/mythos-preview/"
+    }
+  ],
+  "confidence": "Medium",
+  "main_uncertainty": "Anthropic publicly documents stronger realized persistence for Mythos than for Opus 4.7, but the comparison is not clean because Mythos evidence comes largely from internal scaffolded deployments and cyber evaluations, while Opus 4.7 evidence comes more from product and API documentation; Anthropic has not published a direct side-by-side persistence benchmark between Mythos and Opus 4.7.",
+  "metadata": {
+    "source_markdown_file": "AI Risk Map - Claude Mythos Preview (2).md",
+    "version": 1,
+    "created_at": "2026-04-16",
+    "updated_at": "2026-04-16",
+    "tags": [
+      "model",
+      "anthropic",
+      "cybersecurity",
+      "frontier",
+      "agentic",
+      "impact-global",
+      "mode-cascading"
+    ]
+  },
+  "impact_scale": "global",
+  "impact_mode": "cascading"
+}

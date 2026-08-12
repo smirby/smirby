@@ -1,0 +1,71 @@
+{
+  "id": "autogpt",
+  "name": "AutoGPT",
+  "system_type": "framework",
+  "scoring_mode": "enablement",
+  "summary": "AutoGPT is best understood today as an open-source framework/platform for building and running autonomous or semi-autonomous LLM agents, rather than as a single consistently realized agent behavior. The maintained project enables looping workflows, tool use, scheduling, reusable agent blocks, and long-running automation, but typical real-world AutoGPT-style deployments remain configuration-sensitive and often require human oversight because reliability, looping control, and task success vary substantially across versions and setups.",
+  "scores": {
+    "agii": 2.6,
+    "casx": 2.7,
+    "trajectory": "Large"
+  },
+  "boundary": "Below boundary",
+  "primary_interpretation": {
+    "driver": "Explicit support for continuous workflows, task decomposition, reusable agent blocks, and external tool/API integrations",
+    "constraint": "Realized autonomy is inconsistent in practice; persistence and action quality depend heavily on model quality, permissions, workflow design, and human monitoring"
+  },
+  "explanations": {
+    "agii": {
+      "evidence": "AutoGPT documentation describes continuous agents that can run indefinitely on triggers, along with workflows, scheduling, and reusable agent blocks. The earlier AutoGPT Classic explicitly framed itself as an autonomous agent capable of task decomposition and iterative action. However, Classic is now unsupported, and real-world usage frequently reports looping failures, supervision needs, and uneven performance.",
+      "interpretation": "AutoGPT enables persistent agency structures such as loops, stateful workflows, and chained subtasks, but these are not robustly realized by default. Sustained autonomous behavior typically requires careful configuration and can degrade into repetition or stalled progress.",
+      "implication": "AGII is above simple prompt tooling because AutoGPT supports continuing execution across steps, but remains below near-boundary systems due to fragility and inconsistency in persistence."
+    },
+    "casx": {
+      "evidence": "AutoGPT workflows can connect to external services, scripts, APIs, and conditional logic. In practice, systems may interact with files, HTTP endpoints, and external tools, sometimes including browser use and code execution, depending on configuration and permissions.",
+      "interpretation": "AutoGPT enables real-world action pathways such as data gathering, service calls, and workflow execution. However, power is gated by permissions, environment setup, and model/tool quality, and many deployments resemble supervised automation rather than reliable autonomous operation.",
+      "implication": "CASX is moderately high for a framework, but not extreme: real-world impact depends on developer configuration and operational controls."
+    },
+    "trajectory": {
+      "evidence": "AutoGPT has evolved from the experimental Classic agent into a broader platform with agent builders, reusable blocks, marketplaces, and benchmarking infrastructure. Development emphasizes operationalization and measurement, though real-world limitations in reliability and decision-making remain.",
+      "interpretation": "Trajectory is upward in engineering maturity and integration breadth, but not yet indicative of rapid increases in realized autonomy. Improvements are incremental rather than transformative.",
+      "implication": "Expect gradual increases in enabled risk via better tooling and deployment ease, but current evidence supports a Large rather than Very Large trajectory."
+    }
+  },
+  "change_levers": {
+    "increase_risk": "More reliable long-running execution, stronger memory persistence, richer default tool access, better recovery from loops/errors, and easier multi-agent delegation would increase both AGII and CASX.",
+    "decrease_risk": "Human approval gates, bounded runtimes, restricted tool permissions, sandboxing, weaker persistence, and tighter workflow scoping would reduce both AGII and CASX."
+  },
+  "classification_notes": {
+    "where_risk_determined": "design, deployment",
+    "where_risk_triggered": "usage context involving enabled tools, credentials, workflow design, and runtime permissions",
+    "inevitable_under_normal_use": "Conditional — AutoGPT enables agentic behavior, but realized risk depends strongly on configuration, tools, and deployment choices"
+  },
+  "sources": [
+    {
+      "title": "AutoGPT GitHub",
+      "url": "https://github.com/Significant-Gravitas/AutoGPT"
+    },
+    {
+      "title": "AutoGPT Platform Docs",
+      "url": "https://agpt.co/docs/platform"
+    },
+    {
+      "title": "AutoGPT Classic README",
+      "url": "https://github.com/Significant-Gravitas/AutoGPT/blob/master/classic/README.md"
+    }
+  ],
+  "confidence": "Medium",
+  "main_uncertainty": "AutoGPT is not a single stable artifact: autonomy varies significantly across versions, forks, models, permissions, and configuration, making it difficult to attribute a single consistent level of realized agency or action capacity.",
+  "metadata": {
+    "source_markdown_file": "AI Risk Map - AutoGPT.md",
+    "version": 1,
+    "created_at": "2026-04-17",
+    "updated_at": "2026-04-17",
+    "tags": [
+      "framework",
+      "agent-platform",
+      "open-source",
+      "automation"
+    ]
+  }
+}

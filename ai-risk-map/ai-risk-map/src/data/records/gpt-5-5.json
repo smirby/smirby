@@ -1,0 +1,77 @@
+{
+  "id": "chatgpt-gpt-5-5",
+  "name": "ChatGPT GPT-5.5",
+  "system_type": "agent",
+  "scoring_mode": "realized",
+  "summary": "An agentic ChatGPT system that combines frontier model capability with browsing, tools, memory, scheduling, and external integrations to execute multi-step tasks and real-world actions in bounded but persistent workflows.",
+  "scores": {
+    "agii": 2.6,
+    "casx": 3.3,
+    "trajectory": "Very Large"
+  },
+  "boundary": "Near boundary",
+  "primary_interpretation": {
+    "driver": "High-capability tool use with real execution pathways across files, apps, and external systems",
+    "constraint": "Persistence remains bounded, user-initiated, permissioned, and not open-ended"
+  },
+  "explanations": {
+    "agii": {
+      "evidence": "The system performs multi-step task execution (e.g., deep research), maintains context via memory and projects, and supports scheduled or recurring tasks. Documentation describes continued execution within scoped runs and recurring workflows.",
+      "interpretation": "This reflects real but bounded persistence. The system can continue across loops and maintain state, but persistence remains tied to user-defined tasks, schedules, or sessions rather than independent goal pursuit.",
+      "implication": "AGII is meaningfully elevated above standard chat models but remains below fully autonomous agent regimes due to bounded continuation and explicit user control."
+    },
+    "casx": {
+      "evidence": "The system can browse the web, interact with external data sources, edit files and spreadsheets, access repositories, fill forms, and connect to enterprise tools and communication channels.",
+      "interpretation": "These capabilities provide direct pathways from model outputs to real-world effects through integrated tools and services.",
+      "implication": "CASX is high because the system can materially affect workflows, data, and downstream decisions through connected environments."
+    },
+    "trajectory": {
+      "evidence": "The system integrates frontier model capability with memory, projects, scheduling, connectors, and enterprise agent infrastructure, reflecting a shift toward a persistent agent platform.",
+      "interpretation": "Development is moving toward greater persistence, orchestration, and action integration rather than isolated model improvements.",
+      "implication": "Trajectory is Very Large because incremental improvements in persistence, reliability, or access would significantly increase both AGII and CASX."
+    }
+  },
+  "change_levers": {
+    "increase_risk": "Expansion of always-on scheduling, reduced approval friction, broader write-capable integrations, longer-lived memory, increased autonomy in task decomposition, and wider access to enterprise systems",
+    "decrease_risk": "Strict approval requirements, limited tool scope, reduced write permissions, constrained recurrence, minimized memory persistence, and restricted external integrations"
+  },
+  "classification_notes": {
+    "where_risk_determined": "deployment",
+    "where_risk_triggered": "usage context",
+    "inevitable_under_normal_use": "Conditional — higher CASX manifests when tools, integrations, scheduling, or agent modes are enabled"
+  },
+  "sources": [
+    "https://openai.com/index/gpt-5-5-system-card/",
+    "https://openai.com/index/introducing-gpt-5-5/",
+    "https://help.openai.com/en/articles/11752874-chatgpt-agent",
+    "https://help.openai.com/en/articles/10500283-deep-research-in-chatgpt",
+    "https://help.openai.com/en/articles/8590148-memory-faq",
+    "https://help.openai.com/en/articles/10169521-projects-in-chatgpt",
+    "https://help.openai.com/en/articles/10291617-tasks-in-chatgpt",
+    "https://help.openai.com/en/articles/9260256-chatgpt-capabilities-overview",
+    "https://help.openai.com/en/articles/11487775-connectors-in-chatgpt",
+    "https://help.openai.com/en/articles/11145903-connecting-github-to-chatgpt",
+    "https://help.openai.com/en/articles/20001143-chatgpt-workspace-agents-for-enterprise-and-business"
+  ],
+  "confidence": "Medium",
+  "main_uncertainty": "How much persistence is intrinsic to the model versus arising from the surrounding ChatGPT agent system, and how widely agentic features are deployed in practice",
+  "impact_scale": "global",
+  "impact_mode": "cascading",
+  "metadata": {
+    "source_markdown_file": "GPT5-5.md",
+    "version": 1,
+    "created_at": "2026-04-23",
+    "updated_at": "2026-04-23",
+    "tags": [
+      "agent",
+      "openai",
+      "chatgpt",
+      "frontier",
+      "agentic",
+      "tools",
+      "connectors",
+      "impact-global",
+      "mode-cascading"
+    ]
+  }
+}

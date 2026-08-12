@@ -1,0 +1,71 @@
+{
+  "id": "devin",
+  "name": "Devin",
+  "system_type": "agent",
+  "scoring_mode": "realized",
+  "summary": "Devin is best classified as an agent rather than a framework because its typical product form is a delegated software-engineering worker that plans, executes, tests, and iterates inside its own environment. It demonstrates real multi-step autonomy in coding workflows, but observed performance is uneven: official materials show substantial persistence and tool use, while independent evaluations show frequent failures and supervision needs.",
+  "scores": {
+    "agii": 3.0,
+    "casx": 3.1,
+    "trajectory": "Large"
+  },
+  "boundary": "Near boundary",
+  "primary_interpretation": {
+    "driver": "Realized long-horizon software task execution inside a sandboxed development environment with memory, iteration, tool use, and cross-session continuation",
+    "constraint": "Reliability remains inconsistent outside structured tasks; performance degrades on ambiguous or complex work and often requires human review and intervention"
+  },
+  "explanations": {
+    "agii": {
+      "evidence": "Devin operates through persistent sessions with its own shell, IDE, and browser; it can write, run, and test code, iterate against failures, and continue work across sessions and PR cycles. It also supports parallel delegation via MultiDevin. Independent evaluations show that this persistence is often brittle, with frequent failures or inconclusive results on real-world tasks.",
+      "interpretation": "Devin exhibits realized persistence rather than merely enabled persistence: it can carry tasks through multi-step workflows with limited prompting. However, persistence is not robustly goal-secure and can degrade into inefficient or incorrect trajectories without human correction.",
+      "implication": "AGII is high for a deployed agent because sustained multi-step agency is present in practice, but it should not be pushed higher due to fragility and domain constraints."
+    },
+    "casx": {
+      "evidence": "Devin operates inside a sandboxed environment with shell, browser, IDE, repository access, dependency installation, and test execution. It can create pull requests, respond to reviews, and interact with engineering systems, sometimes with access to internal resources via credentials or VPN configuration.",
+      "interpretation": "Devin has real-world effect pathways: it can modify codebases, execute programs, and produce artifacts that can enter production workflows. However, its impact is constrained by sandboxing, permissions, and typical human review before deployment.",
+      "implication": "CASX is slightly above AGII because its operational surface is concrete and consequential, but it remains far below extreme scores due to uneven reliability and organizational safeguards."
+    },
+    "trajectory": {
+      "evidence": "Devin has evolved from early-access demonstrations to general availability with expanded features including PR resumption, scheduling, playbooks, knowledge systems, and multi-agent orchestration. Reports indicate growing deployment in software workflows, alongside continued limitations in reliability on open-ended tasks.",
+      "interpretation": "The direction of change is upward in deployment maturity and workflow integration, but improvements are focused on bounded engineering tasks rather than solving general autonomous reliability.",
+      "implication": "Trajectory is Large: Devin-style agents are becoming more useful and integrated, but not yet on a path to fully reliable autonomous operation across domains."
+    }
+  },
+  "change_levers": {
+    "increase_risk": "Greater success on ambiguous tasks, stronger autonomous scheduling, broader system access, reduced human review, and wider permissions would increase AGII and CASX.",
+    "decrease_risk": "Tighter approval requirements, restricted access, stronger sandboxing, shorter task scopes, and limiting use to draft/support roles would reduce AGII and CASX."
+  },
+  "classification_notes": {
+    "where_risk_determined": "design, deployment",
+    "where_risk_triggered": "usage context involving repository access, environment permissions, secrets, CI pathways, and organizational authority",
+    "inevitable_under_normal_use": "Conditional — Devin exhibits agentic behavior in normal use, but the magnitude depends on task type, permissions, and human oversight"
+  },
+  "sources": [
+    {
+      "title": "Devin product overview",
+      "url": "https://www.cognition-labs.com/devin"
+    },
+    {
+      "title": "Devin documentation",
+      "url": "https://docs.devin.ai/get-started/devin-intro"
+    },
+    {
+      "title": "Devin blog introduction",
+      "url": "https://cognition.ai/blog/introducing-devin"
+    }
+  ],
+  "confidence": "Medium",
+  "main_uncertainty": "Public evidence mixes strong official claims with weaker independent performance results; true capability depends heavily on task structure and deployment conditions.",
+  "metadata": {
+    "source_markdown_file": "AI Risk Map - Devin AI.md",
+    "version": 1,
+    "created_at": "2026-04-17",
+    "updated_at": "2026-04-17",
+    "tags": [
+      "agent",
+      "software-engineering",
+      "autonomous-workflows",
+      "cognition"
+    ]
+  }
+}

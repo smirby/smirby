@@ -1,0 +1,61 @@
+{
+  "id": "gps-navigation",
+  "name": "GPS Navigation System",
+  "system_type": "model",
+  "scoring_mode": "realized",
+  "summary": "A real-time routing system that computes and updates navigation paths based on user-defined destinations and changing environmental conditions.",
+  "scores": {
+    "agii": 1.1,
+    "casx": 3.2,
+    "trajectory": "Medium"
+  },
+  "boundary": "Below boundary",
+  "primary_interpretation": {
+    "driver": "Continuous real-world influence over routing and movement decisions",
+    "constraint": "Strictly goal-bounded and user-initiated operation with no independent task persistence"
+  },
+  "explanations": {
+    "agii": {
+      "evidence": "Navigation systems continuously recalculate routes in response to traffic and movement, maintaining an active session over time.",
+      "interpretation": "Even though the system appears persistent, this behavior is entirely reactive and bounded to a user-defined goal, with no independent continuation or goal revision.",
+      "implication": "AGII is low; apparent persistence does not constitute sustained agency pressure."
+    },
+    "casx": {
+      "evidence": "GPS systems influence real-world travel decisions, logistics, and large-scale movement patterns across millions of users.",
+      "interpretation": "The system has substantial real-world impact despite lacking autonomy.",
+      "implication": "CASX is high due to broad deployment and influence over physical behavior."
+    },
+    "trajectory": {
+      "evidence": "Navigation systems continue to improve incrementally through better data integration and optimization.",
+      "interpretation": "Enhancements are steady but not structurally transformative.",
+      "implication": "Trajectory is Medium."
+    }
+  },
+  "change_levers": {
+    "increase_risk": "Integration with autonomous vehicle control or independent decision-making over destinations",
+    "decrease_risk": "Maintaining user-defined goals and limiting system authority to route suggestion"
+  },
+  "classification_notes": {
+    "where_risk_determined": "design and deployment",
+    "where_risk_triggered": "real-world navigation and logistics decisions",
+    "inevitable_under_normal_use": "No — effects depend on user reliance and context"
+  },
+  "sources": [],
+  "confidence": "High",
+  "main_uncertainty": "Boundary between reactive recalculation and perceived persistence in user experience",
+  "metadata": {
+    "source_markdown_file": null,
+    "version": 1,
+    "created_at": "2026-04-16",
+    "updated_at": "2026-04-16",
+    "tags": [
+      "navigation",
+      "high-casx",
+      "low-agency",
+      "impact-societal",
+      "mode-mediated"
+    ]
+  },
+  "impact_scale": "societal",
+  "impact_mode": "mediated"
+}

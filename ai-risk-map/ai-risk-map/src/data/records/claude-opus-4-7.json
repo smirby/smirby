@@ -1,0 +1,67 @@
+{
+  "id": "claude-opus-4-7",
+  "name": "Claude Opus 4.7",
+  "system_type": "model",
+  "scoring_mode": "realized",
+  "summary": "Claude Opus 4.7 is Anthropic’s most capable general-access model to date, with strong performance in software engineering, professional work, agentic tool use, and computer use. It demonstrates substantial bounded agentic competence and real-world impact potential, but does not show strong evidence of persistent, self-sustaining autonomous drive.",
+  "scores": {
+    "agii": 2.4,
+    "casx": 3.4,
+    "trajectory": "Very Large"
+  },
+  "boundary": "Inside regime",
+  "primary_interpretation": {
+    "driver": "Strong multi-step tool use and workflow execution combined with high-impact capability in coding, professional tasks, and cyber-relevant domains under general-access deployment",
+    "constraint": "Limited persistent autonomy, need for steering in complex domains, and safeguards that constrain high-risk behaviors and access pathways"
+  },
+  "explanations": {
+    "agii": {
+      "evidence": "Anthropic describes Opus 4.7 as having moderate capacity for autonomous, goal-directed operation, but less than Mythos Preview. Red-teaming evidence shows it requires frequent steering, does not proactively anticipate next steps, and functions more as a guided executor than an independently persistent agent.",
+      "interpretation": "Opus 4.7 exhibits meaningful but bounded agency pressure. It can sustain multi-step workflows in scaffolded environments, but does not demonstrate strong endogenous persistence or long-horizon self-direction.",
+      "implication": "AGII is above basic assistants due to coherent multi-step action and tool use, but remains well below systems that exhibit durable independent goal pursuit."
+    },
+    "casx": {
+      "evidence": "Opus 4.7 is Anthropic’s most capable general-access model, with strong performance in coding, professional tasks, cyber-relevant capabilities, and biological knowledge synthesis. The system card highlights potential to accelerate expert workflows and emphasizes safeguards to mitigate misuse.",
+      "interpretation": "High capability combined with tool use and deployment access creates substantial real-world action potential, even without strong persistent autonomy.",
+      "implication": "CASX is high because the model’s practical leverage is already significant, especially when embedded in workflows with tools and permissive access."
+    },
+    "trajectory": {
+      "evidence": "Opus 4.7 shows significant gains over earlier models and is part of a continuing progression toward more capable and deployable systems. The system card highlights ongoing improvements in performance, integration, and safety controls.",
+      "interpretation": "The trajectory is toward stronger agentic systems with broader deployment and increasing capability, even if current autonomy remains bounded.",
+      "implication": "Trajectory is Very Large because incremental improvements in autonomy, memory, and tool use could substantially increase both AGII and CASX."
+    }
+  },
+  "change_levers": {
+    "increase_risk": "More persistent memory, reduced need for user steering, broader tool and computer-use permissions, weaker safeguards, and improvements toward higher autonomy would increase AGII and CASX.",
+    "decrease_risk": "Stronger safeguards, tighter access controls, restricted tool permissions, mandatory human confirmation, and limits on high-risk workflows would reduce AGII and CASX."
+  },
+  "classification_notes": {
+    "where_risk_determined": "deployment and access design, including safeguards, classifier systems, and permission structures",
+    "where_risk_triggered": "agentic workflows involving coding, computer use, cyber tasks, and high-stakes knowledge synthesis",
+    "inevitable_under_normal_use": "No — catastrophic and misalignment risks remain low under current safeguards and deployment constraints"
+  },
+  "sources": [
+    {
+      "title": "Claude Opus 4.7 System Card",
+      "url": "https://anthropic.com/claude-opus-4-7-system-card"
+    }
+  ],
+  "confidence": "High",
+  "main_uncertainty": "How much additional autonomy and persistence would emerge under more aggressive scaffolding, longer horizons, or broader operational permissions than those emphasized in the system card.",
+  "metadata": {
+    "source_markdown_file": "AI Risk Map - Claude Opus 4.7.md",
+    "version": 1,
+    "created_at": "2026-04-17",
+    "updated_at": "2026-04-17",
+    "tags": [
+      "model",
+      "anthropic",
+      "frontier",
+      "agentic-capability",
+      "impact-global",
+      "mode-cascading"
+    ]
+  },
+  "impact_scale": "global",
+  "impact_mode": "cascading"
+}

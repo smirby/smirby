@@ -12,7 +12,7 @@ In 2020, I was appointed Chevalier of the Ordre des Palmes Académiques by the F
 ## Current Projects
 
 **From Tool to Actor: Artificial Intelligence and Human Extinction Risk**
-William Leiss & Richard Smith, forthcoming from McGill-Queen's University Press (Fall 2026).
+William Leiss & Richard Smith, forthcoming from McGill-Queen's University Press (Fall 2027).
 
 The book presents a comprehensive analysis of the impending transition of artificial intelligence from a passive tool to an autonomous actor. We argue that while current AI provides significant benefits in medicine and science, the rapid pursuit of superintelligence poses an absolute risk of human extinction — and that existing government regulations are structurally inadequate because they treat AI as a controllable product rather than an adaptive, deceptive entity.
 

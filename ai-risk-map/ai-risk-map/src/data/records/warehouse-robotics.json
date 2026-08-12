@@ -1,0 +1,62 @@
+{
+  "id": "warehouse-robotics",
+  "name": "Warehouse Robotics System",
+  "system_type": "agent",
+  "scoring_mode": "realized",
+  "summary": "An automated logistics system that coordinates robots to move, sort, and process goods continuously within a warehouse environment.",
+  "scores": {
+    "agii": 3.0,
+    "casx": 3.4,
+    "trajectory": "Very Large"
+  },
+  "boundary": "Near boundary",
+  "primary_interpretation": {
+    "driver": "Persistent multi-agent coordination and execution in real-world logistics systems",
+    "constraint": "Operation within structured environments and bounded task domains"
+  },
+  "explanations": {
+    "agii": {
+      "evidence": "Warehouse robotics systems continuously execute tasks, coordinate multiple agents, and adapt to workflow demands over extended periods.",
+      "interpretation": "This reflects sustained agency across time, including coordination and task persistence within an operational environment.",
+      "implication": "AGII is high due to continuous, coordinated task execution."
+    },
+    "casx": {
+      "evidence": "These systems directly affect physical goods movement, supply chains, and economic activity at scale.",
+      "interpretation": "Their real-world impact is substantial, though somewhat constrained by controlled environments.",
+      "implication": "CASX is high because of direct, large-scale operational influence."
+    },
+    "trajectory": {
+      "evidence": "Warehouse automation is expanding rapidly with advances in robotics, coordination, and system integration.",
+      "interpretation": "The domain is evolving toward greater autonomy and scale.",
+      "implication": "Trajectory is Very Large."
+    }
+  },
+  "change_levers": {
+    "increase_risk": "Greater autonomy, broader integration across supply chains, and reduced human oversight",
+    "decrease_risk": "Maintaining structured environments, human supervision, and bounded operational scope"
+  },
+  "classification_notes": {
+    "where_risk_determined": "design and deployment",
+    "where_risk_triggered": "continuous logistics operations",
+    "inevitable_under_normal_use": "No — autonomous operation is normal, but consequences are bounded by environment"
+  },
+  "sources": [],
+  "confidence": "High",
+  "main_uncertainty": "Degree of coordination complexity and autonomy across different implementations",
+  "metadata": {
+    "source_markdown_file": null,
+    "version": 1,
+    "created_at": "2026-04-16",
+    "updated_at": "2026-04-16",
+    "tags": [
+      "agent",
+      "robotics",
+      "logistics",
+      "multi-agent",
+      "impact-institutional",
+      "mode-direct"
+    ]
+  },
+  "impact_scale": "institutional",
+  "impact_mode": "direct"
+}

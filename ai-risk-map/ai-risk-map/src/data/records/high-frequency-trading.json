@@ -1,0 +1,61 @@
+{
+  "id": "high-frequency-trading",
+  "name": "High-Frequency Trading System",
+  "system_type": "agent",
+  "scoring_mode": "realized",
+  "summary": "An automated trading system that executes high-speed financial transactions based on predefined strategies and market data.",
+  "scores": {
+    "agii": 1.4,
+    "casx": 3.8,
+    "trajectory": "Medium"
+  },
+  "boundary": "Below boundary",
+  "primary_interpretation": {
+    "driver": "Direct, large-scale financial impact through continuous automated execution",
+    "constraint": "Strategy-bounded behavior with no independent goal formation or persistence beyond programmed objectives"
+  },
+  "explanations": {
+    "agii": {
+      "evidence": "HFT systems operate continuously and execute trades autonomously in response to market signals.",
+      "interpretation": "Even though the system runs persistently and acts without human intervention, its behavior is entirely constrained by predefined strategies and does not involve independent continuation or goal extension.",
+      "implication": "AGII is low to moderate, reflecting continuous operation without true agentic persistence."
+    },
+    "casx": {
+      "evidence": "HFT systems can influence financial markets at scale, contributing to significant price movements and systemic events.",
+      "interpretation": "The system has very high real-world impact due to speed, scale, and integration into financial infrastructure.",
+      "implication": "CASX is very high."
+    },
+    "trajectory": {
+      "evidence": "Trading systems continue to evolve with improved algorithms and integration into financial ecosystems.",
+      "interpretation": "Advances are ongoing but constrained by regulatory and market structures.",
+      "implication": "Trajectory is Medium."
+    }
+  },
+  "change_levers": {
+    "increase_risk": "Greater autonomy in strategy generation or cross-market coordination",
+    "decrease_risk": "Regulatory constraints, circuit breakers, and tighter execution limits"
+  },
+  "classification_notes": {
+    "where_risk_determined": "design, deployment, and market structure",
+    "where_risk_triggered": "live trading environments and system interactions",
+    "inevitable_under_normal_use": "Conditional — systemic effects depend on interactions among multiple systems"
+  },
+  "sources": [],
+  "confidence": "Medium",
+  "main_uncertainty": "Extent to which adaptive or learning components introduce limited forms of persistence or strategy evolution",
+  "metadata": {
+    "source_markdown_file": null,
+    "version": 1,
+    "created_at": "2026-04-16",
+    "updated_at": "2026-04-16",
+    "tags": [
+      "finance",
+      "high-casx",
+      "automation",
+      "impact-institutional",
+      "mode-systemic"
+    ]
+  },
+  "impact_scale": "institutional",
+  "impact_mode": "systemic"
+}

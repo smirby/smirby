@@ -1,0 +1,92 @@
+{
+  "id": "claude-code",
+  "name": "Claude Code",
+  "system_type": "agent",
+  "scoring_mode": "realized",
+  "summary": "Claude Code is an agentic coding system from Anthropic that operates in the terminal, IDE, desktop app, and browser, with the ability to read a codebase, edit files, run shell commands, integrate with development tools, and in research preview use computer-use capabilities on a local machine. It also supports session persistence, resumable work, channels, loops, and scheduled tasks, which pushes it beyond a simple chat assistant and into realized multi-step task execution.",
+  "scores": {
+    "agii": 2.8,
+    "casx": 3.2,
+    "trajectory": "Very Large"
+  },
+  "boundary": "Near boundary",
+  "primary_interpretation": {
+    "driver": "Realized autonomous execution over developer tools and local computing environments",
+    "constraint": "User-controlled permissions, session scoping, and deployment-context dependence"
+  },
+  "explanations": {
+    "agii": {
+      "evidence": "Claude Code is explicitly described as an agentic coding tool that can read a codebase, edit files, run commands, and work across multiple files and tools. Anthropic documents persistent sessions tied to directories, /resume for continuing prior work, project memory loaded at conversation start, channels that push events into a running session, /goal for continued work until a condition is met, and scheduled tasks that automatically rerun prompts; some scheduled jobs run in the cloud and can keep working when a laptop is closed.",
+      "interpretation": "This is realized persistence, not merely latent capability. Claude Code can continue multi-step work within a session, resume prior trajectories, and in some modes re-invoke itself on a schedule or react to incoming events. However, its persistence remains bounded by configured sessions, developer workflows, and permissions rather than open-ended self-directed operation.",
+      "implication": "AGII is meaningfully elevated above ordinary chat models because the system can sustain and re-enter goal-directed work over time, but remains below highly persistent autonomous agents that independently maintain long-horizon objectives across environments without explicit user setup."
+    },
+    "casx": {
+      "evidence": "Claude Code can read and edit files, run shell commands, and integrate with development tools. Permission modes allow varying levels of autonomous execution. Computer-use capabilities permit interaction with applications and graphical interfaces. Hooks can execute shell commands with the permissions of the host user account.",
+      "interpretation": "Claude Code has substantial real-world action pathways in the software-development domain: filesystem modification, command execution, network activity, IDE/Git workflows, and GUI-level interaction. This gives it materially higher power-in-action than a model that only returns text.",
+      "implication": "CASX is high for a developer-facing agent because misuse, error, or misalignment can directly affect code, systems, credentials, and workflows. It is not maximal because its action space remains operator-scoped, permission-gated, and generally local rather than broadly sovereign across external environments."
+    },
+    "trajectory": {
+      "evidence": "Anthropic introduced Claude Code in 2025 as an agentic coding environment and subsequently expanded it with computer use, persistent task control, channels, routines, remote control features, scheduling, and broader integrations. Documentation and release notes show rapid iteration and expanding operational scope.",
+      "interpretation": "The direction of change is toward longer-running, more autonomous, more integrated software agents rather than a static coding assistant. Improvements in both the underlying models and the execution environment reinforce one another.",
+      "implication": "Trajectory is Very Large because the system class is moving quickly toward more durable autonomy and broader operational reach, increasing future risk faster than relatively static software-development tools."
+    }
+  },
+  "change_levers": {
+    "increase_risk": "Wider default permission bypass, always-on background execution, broader network and tool credentials, autonomous task spawning, stronger computer-use defaults, and deeper CI/CD or production integrations would increase both AGII and CASX.",
+    "decrease_risk": "Strict approval gates, sandboxing, deny rules, constrained credentials, disabling cloud scheduling and background channels, and limiting tool access to read-only or narrowly scoped environments would reduce both AGII and CASX."
+  },
+  "classification_notes": {
+    "where_risk_determined": "deployment",
+    "where_risk_triggered": "usage context",
+    "inevitable_under_normal_use": "Conditional — risk depends heavily on granted permissions, connected tools, scheduling and background features, and whether Claude Code is allowed to act beyond supervised interactive sessions."
+  },
+  "sources": [
+    {
+      "title": "Claude Code Docs - Overview",
+      "url": "https://docs.anthropic.com/en/docs/claude-code"
+    },
+    {
+      "title": "Claude Code Docs - Quickstart",
+      "url": "https://docs.anthropic.com/en/docs/claude-code/quickstart"
+    },
+    {
+      "title": "Claude Code Docs - Tools Reference",
+      "url": "https://docs.anthropic.com/en/docs/claude-code/tools"
+    },
+    {
+      "title": "Claude Code Docs - Permission Modes",
+      "url": "https://docs.anthropic.com/en/docs/claude-code/iam"
+    },
+    {
+      "title": "Claude Code Docs - Project Memory",
+      "url": "https://docs.anthropic.com/en/docs/claude-code/memory"
+    },
+    {
+      "title": "Claude Code Docs - Scheduled Tasks",
+      "url": "https://docs.anthropic.com/en/docs/claude-code/scheduled-tasks"
+    },
+    {
+      "title": "Claude Code Docs - Channels",
+      "url": "https://docs.anthropic.com/en/docs/claude-code/channels"
+    },
+    {
+      "title": "Anthropic Release Notes",
+      "url": "https://docs.anthropic.com/en/release-notes"
+    }
+  ],
+  "confidence": "Medium",
+  "main_uncertainty": "The largest uncertainty is how frequently users enable the more persistent modes in practice—especially scheduling, channels, computer use, and remote-control workflows—and how much autonomy Claude Code exercises by default versus only after deliberate configuration.",
+  "metadata": {
+    "source_markdown_file": "Claude Code.md",
+    "version": 1,
+    "created_at": "2026-05-28",
+    "updated_at": "2026-05-28",
+    "tags": [
+      "agent",
+      "coding-agent",
+      "anthropic",
+      "developer-tools",
+      "computer-use"
+    ]
+  }
+}

@@ -1,0 +1,136 @@
+{
+  "systems": [
+    {
+      "id": "autogpt",
+      "name": "AutoGPT",
+      "system_type": "framework",
+      "scoring_mode": "enablement"
+    },
+    {
+      "id": "calculator",
+      "name": "Calculator",
+      "system_type": "model",
+      "scoring_mode": "realized"
+    },
+    {
+      "id": "chatgpt-gpt-5-5",
+      "name": "ChatGPT GPT-5.5",
+      "system_type": "agent",
+      "scoring_mode": "realized"
+    },
+    {
+      "id": "claude-code",
+      "name": "Claude Code",
+      "system_type": "agent",
+      "scoring_mode": "realized"
+    },
+    {
+      "id": "claude-mythos-preview",
+      "name": "Claude Mythos Preview",
+      "system_type": "model",
+      "scoring_mode": "realized"
+    },
+    {
+      "id": "claude-opus-4-7",
+      "name": "Claude Opus 4.7",
+      "system_type": "model",
+      "scoring_mode": "realized"
+    },
+    {
+      "id": "claude-opus-4-8",
+      "name": "Claude Opus 4.8",
+      "system_type": "model",
+      "scoring_mode": "realized"
+    },
+    {
+      "id": "crewai",
+      "name": "CrewAI",
+      "system_type": "framework",
+      "scoring_mode": "enablement"
+    },
+    {
+      "id": "deepseek-v4-preview",
+      "name": "DeepSeek V4 Preview",
+      "system_type": "model",
+      "scoring_mode": "realized"
+    },
+    {
+      "id": "devin",
+      "name": "Devin",
+      "system_type": "agent",
+      "scoring_mode": "realized"
+    },
+    {
+      "id": "gemini-3-1-pro",
+      "name": "Gemini 3.1 Pro",
+      "system_type": "model",
+      "scoring_mode": "realized"
+    },
+    {
+      "id": "gps-navigation",
+      "name": "GPS Navigation System",
+      "system_type": "model",
+      "scoring_mode": "realized"
+    },
+    {
+      "id": "gpt-5-4-thinking",
+      "name": "GPT-5.4 Thinking",
+      "system_type": "model",
+      "scoring_mode": "realized"
+    },
+    {
+      "id": "high-frequency-trading",
+      "name": "High-Frequency Trading System",
+      "system_type": "agent",
+      "scoring_mode": "realized"
+    },
+    {
+      "id": "langgraph",
+      "name": "LangGraph",
+      "system_type": "framework",
+      "scoring_mode": "enablement"
+    },
+    {
+      "id": "manus",
+      "name": "Manus",
+      "system_type": "agent",
+      "scoring_mode": "realized"
+    },
+    {
+      "id": "openai-responses-api",
+      "name": "OpenAI Responses API",
+      "system_type": "framework",
+      "scoring_mode": "enablement"
+    },
+    {
+      "id": "robot-vacuum",
+      "name": "Robot Vacuum",
+      "system_type": "agent",
+      "scoring_mode": "realized"
+    },
+    {
+      "id": "self-driving-car",
+      "name": "Self-Driving Car",
+      "system_type": "agent",
+      "scoring_mode": "realized"
+    },
+    {
+      "id": "smart-thermostat",
+      "name": "Smart Thermostat",
+      "system_type": "agent",
+      "scoring_mode": "realized"
+    },
+    {
+      "id": "spell-checker",
+      "name": "Spell Checker",
+      "system_type": "model",
+      "scoring_mode": "realized"
+    },
+    {
+      "id": "warehouse-robotics",
+      "name": "Warehouse Robotics System",
+      "system_type": "agent",
+      "scoring_mode": "realized"
+    }
+  ]
+}

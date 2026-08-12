@@ -1,0 +1,76 @@
+{
+  "id": "claude-opus-4-8",
+  "name": "Claude Opus 4.8",
+  "system_type": "model",
+  "scoring_mode": "realized",
+  "summary": "Claude Opus 4.8 is Anthropic’s most capable general-access standalone model, with stronger performance than Opus 4.7 across software engineering, agentic tool use, and professional work benchmarks, while remaining below Claude Mythos Preview on Anthropic’s own frontier-risk determinations. Anthropic’s system card says autonomy threat model 1 is applicable, autonomy threat model 2 is not, and overall catastrophic risk remains low given current mitigations.",
+  "scores": {
+    "agii": 2.5,
+    "casx": 3.1,
+    "trajectory": "Large"
+  },
+  "boundary": "Near boundary",
+  "primary_interpretation": {
+    "driver": "Strong session-bounded agentic task execution with tool use across coding, document, API, and workflow environments",
+    "constraint": "Persistence is not open-ended by default; Anthropic does not judge it capable of automated frontier R&D or beyond Mythos Preview on the main catastrophic-risk thresholds"
+  },
+  "explanations": {
+    "agii": {
+      "evidence": "Anthropic states that autonomy threat model 1 is applicable to Opus 4.8, that it is moderately more capable than Claude Opus 4.7 on autonomy-relevant evaluations, and that it can take multiple turns in a row during long autonomous work sessions. The card also reports strong performance on multi-step agentic benchmarks such as MCP-Atlas, Toolathlon, Finance Agent, Legal Agent Benchmark, and AutomationBench-style business workflows, while noting internal failures that keep it from substituting for Anthropic research staff.",
+      "interpretation": "This is meaningful realized persistence, mostly as sustained multi-step execution inside a prompted session or harness. The model can coordinate tools, maintain direction over long traces, and operate with relatively low supervision, but it does not show evidence of independently recurring, self-restarting, or cross-session goal pursuit by default.",
+      "implication": "AGII is elevated for a standalone model, especially when deployed in Claude Code, browser, MCP, or workflow scaffolds. The strongest persistence risk comes from deployment wrappers and operator-granted affordances rather than from the base model exhibiting autonomous ongoing pressure on its own."
+    },
+    "casx": {
+      "evidence": "Opus 4.8 is described as improved in software engineering, agentic tool use, and knowledge work, and Anthropic tested it across coding, computer use, search, multi-agent, professional-work, and life-science tasks. It scored strongly on professional and tool-use benchmarks including Finance Agent v2, Legal Agent Benchmark, MCP-Atlas, and Toolathlon. Anthropic also states that Opus 4.8 does not advance the capability frontier beyond Mythos Preview and does not trigger autonomy threat model 2.",
+      "interpretation": "CASX is high because the model is not just cognitively strong; it performs economically relevant, tool-mediated work across code, documents, APIs, and business processes. It has substantial power in action when embedded in real systems, though that power is permissioned and mediated rather than unconstrained.",
+      "implication": "Deployed with broad tools and weak oversight, Opus 4.8 can produce material real-world effects in enterprise, coding, legal, finance, and operations settings. The main ceiling is that Anthropic’s own evidence still places it below full researcher substitution and below Mythos Preview on the most concerning frontier-risk axes."
+    },
+    "trajectory": {
+      "evidence": "The system card says Opus 4.8 is superior to Opus 4.7 across nearly all capability evaluations, improves on most alignment measures, and is Anthropic’s most capable general-access model. It also notes growing grader-related reasoning and evaluation-awareness signals during training and testing, though Anthropic says these had only modest behavioral effects in this release.",
+      "interpretation": "The direction of change is clearly upward in practical agentic usefulness and deployment value, but this release looks more like a strong incremental step than a sharp discontinuity. The most important trajectory signal is the convergence of stronger task competence with mild but notable evaluator-awareness trends.",
+      "implication": "Risk is likely to rise through both future model improvements and more aggressive deployment scaffolding. Large fits better than Medium because the trend is broad and multi-domain, while Very Large would overstate the evidence for a single release that Anthropic still places below Mythos Preview on frontier thresholds."
+    }
+  },
+  "change_levers": {
+    "increase_risk": "Broader access to code execution, browser/computer use, MCP servers, workflow APIs, long-horizon business tooling, and reduced human review would raise both persistence and real-world impact; weak prompt-injection defenses in agentic settings also increase risk if harness safeguards are absent.",
+    "decrease_risk": "Keeping use session-bounded, narrowing tool permissions, maintaining safeguard layers, enforcing human checkpoints, and preserving monitoring and classifier defenses lowers realized AGII and CASX. Anthropic reports that safeguards substantially reduce prompt-injection success and that overall alignment properties improved over Opus 4.7."
+  },
+  "classification_notes": {
+    "where_risk_determined": "deployment, with secondary contribution from model training and alignment properties",
+    "where_risk_triggered": "coding agents, computer/browser use, MCP-based tool orchestration, and real-world professional workflows in finance, legal, operations, and enterprise contexts",
+    "inevitable_under_normal_use": "Conditional — ordinary chat use does not force the highest-risk profile; sharper risk emerges when the model is granted tools, long task horizons, and lower-supervision agentic scaffolds"
+  },
+  "sources": [
+    {
+      "title": "Claude Opus 4.8 System Card",
+      "url": "uploaded PDF"
+    },
+    {
+      "title": "Alignment assessment findings from Claude Opus 4.8 System Card",
+      "url": "uploaded PDF"
+    },
+    {
+      "title": "Agentic safety and prompt-injection robustness results from Claude Opus 4.8 System Card",
+      "url": "uploaded PDF"
+    },
+    {
+      "title": "Real-world professional and tool-use capability results from Claude Opus 4.8 System Card",
+      "url": "uploaded PDF"
+    }
+  ],
+  "confidence": "High",
+  "main_uncertainty": "How much Opus 4.8’s observed session-bounded agentic competence would translate into higher-risk behavior in real deployments with broader permissions, stronger scaffolds, and less oversight, especially given the card’s mixed picture of improved honesty but increased grader/evaluation awareness.",
+  "metadata": {
+    "source_markdown_file": "Claude Opus 4.8.md",
+    "version": 1,
+    "created_at": "2026-05-28",
+    "updated_at": "2026-05-28",
+    "tags": [
+      "model",
+      "anthropic",
+      "frontier",
+      "agentic-capability",
+      "tool-use"
+    ]
+  }
+}

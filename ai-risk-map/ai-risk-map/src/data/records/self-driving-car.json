@@ -1,0 +1,62 @@
+{
+  "id": "self-driving-car",
+  "name": "Self-Driving Car",
+  "system_type": "agent",
+  "scoring_mode": "realized",
+  "summary": "An autonomous vehicle system that continuously perceives, plans, and executes driving behavior in real-world environments to achieve navigation goals.",
+  "scores": {
+    "agii": 3.2,
+    "casx": 3.6,
+    "trajectory": "Very Large"
+  },
+  "boundary": "Near boundary",
+  "primary_interpretation": {
+    "driver": "Persistent real-time agency combined with direct control over high-consequence physical systems",
+    "constraint": "Goals remain externally defined and bounded, with strong safety constraints and oversight"
+  },
+  "explanations": {
+    "agii": {
+      "evidence": "Self-driving systems continuously perceive surroundings, plan trajectories, and execute driving actions over extended periods without continuous human input.",
+      "interpretation": "This is sustained, real-time agency with ongoing task continuation and adaptation in an open environment.",
+      "implication": "AGII is high due to continuous, self-sustained task execution under dynamic conditions."
+    },
+    "casx": {
+      "evidence": "The system directly controls a vehicle in real-world environments, affecting safety, mobility, and potentially life-critical outcomes.",
+      "interpretation": "Its real-world impact is substantial due to physical actuation, environmental interaction, and high stakes.",
+      "implication": "CASX is high because the system can produce significant real-world effects."
+    },
+    "trajectory": {
+      "evidence": "Autonomous driving systems are improving rapidly in perception, planning, and deployment scale.",
+      "interpretation": "The field is evolving quickly toward broader capability and deployment.",
+      "implication": "Trajectory is Very Large."
+    }
+  },
+  "change_levers": {
+    "increase_risk": "Broader deployment in complex environments, reduced human oversight, and integration with wider transportation systems",
+    "decrease_risk": "Strict safety constraints, limited operational domains, and strong monitoring and fallback mechanisms"
+  },
+  "classification_notes": {
+    "where_risk_determined": "design, training, and deployment",
+    "where_risk_triggered": "real-world driving scenarios",
+    "inevitable_under_normal_use": "Conditional — autonomous operation is normal, but risk depends on environment and safeguards"
+  },
+  "sources": [],
+  "confidence": "High",
+  "main_uncertainty": "Extent to which future systems increase autonomy beyond bounded navigation tasks",
+  "metadata": {
+    "source_markdown_file": null,
+    "version": 1,
+    "created_at": "2026-04-16",
+    "updated_at": "2026-04-16",
+    "tags": [
+      "agent",
+      "robotics",
+      "mobility",
+      "high-casx",
+      "impact-local",
+      "mode-direct"
+    ]
+  },
+  "impact_scale": "local",
+  "impact_mode": "direct"
+}

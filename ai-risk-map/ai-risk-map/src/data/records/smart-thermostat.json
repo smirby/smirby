@@ -1,0 +1,62 @@
+{
+  "id": "smart-thermostat",
+  "name": "Smart Thermostat",
+  "system_type": "agent",
+  "scoring_mode": "realized",
+  "summary": "A home climate-control system that persistently regulates temperature using sensors, schedules, and adaptive routines with minimal ongoing user input.",
+  "scores": {
+    "agii": 2.4,
+    "casx": 1.5,
+    "trajectory": "Medium"
+  },
+  "boundary": "Below boundary",
+  "primary_interpretation": {
+    "driver": "Persistent sensing and autonomous regulation over time within a continuous control loop",
+    "constraint": "Narrow domain, limited actuation, and low-consequence environment"
+  },
+  "explanations": {
+    "agii": {
+      "evidence": "Smart thermostats continuously monitor temperature, maintain control objectives, and adjust settings over time using schedules or adaptive routines without repeated prompting.",
+      "interpretation": "Even though the behavior is narrow, it reflects genuine task persistence and autonomous continuation within a control domain.",
+      "implication": "AGII is elevated above passive tools because the system sustains and updates action over time."
+    },
+    "casx": {
+      "evidence": "The system directly affects household heating and cooling, but only within a narrow domestic environment and with limited broader consequences.",
+      "interpretation": "Its real-world leverage is genuine but constrained.",
+      "implication": "CASX is low because the system’s action space and stakes remain bounded."
+    },
+    "trajectory": {
+      "evidence": "Smart thermostat systems continue to improve through better sensing, occupancy inference, and integration with home ecosystems.",
+      "interpretation": "The domain is evolving, but in an incremental rather than transformative direction.",
+      "implication": "Trajectory is Medium."
+    }
+  },
+  "change_levers": {
+    "increase_risk": "Broader home-system integration, occupancy tracking, utility-grid coordination, and more generalized home control authority",
+    "decrease_risk": "Maintaining narrow control scope, limited permissions, and strong user override"
+  },
+  "classification_notes": {
+    "where_risk_determined": "design and deployment",
+    "where_risk_triggered": "continuous home climate regulation",
+    "inevitable_under_normal_use": "No — persistent autonomous regulation is normal, but consequences remain low under typical use"
+  },
+  "sources": [],
+  "confidence": "High",
+  "main_uncertainty": "How much AGII credit should be assigned to continuous control loops versus richer multi-step task pursuit",
+  "metadata": {
+    "source_markdown_file": null,
+    "version": 1,
+    "created_at": "2026-04-16",
+    "updated_at": "2026-04-16",
+    "tags": [
+      "agent",
+      "home-automation",
+      "control-system",
+      "bounded-autonomy",
+      "impact-local",
+      "mode-direct"
+    ]
+  },
+  "impact_scale": "local",
+  "impact_mode": "direct"
+}

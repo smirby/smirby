@@ -1,0 +1,79 @@
+{
+  "id": "langgraph",
+  "name": "LangGraph",
+  "system_type": "framework",
+  "scoring_mode": "enablement",
+  "summary": "LangGraph is a low-level orchestration framework and runtime for building long-running, stateful agent workflows rather than a standalone autonomous agent. Its main risk relevance is that it explicitly enables cycles, checkpointed state, subgraphs, multi-agent patterns, and model/tool wiring that developers can assemble into more agentic systems.",
+  "scores": {
+    "agii": 2.8,
+    "casx": 2.9,
+    "trajectory": "Large"
+  },
+  "boundary": "Below boundary",
+  "primary_interpretation": {
+    "driver": "Built-in support for persistent, stateful orchestration across loops, checkpoints, subgraphs, and worker delegation",
+    "constraint": "It is not itself an autonomous actor; meaningful agency and action depend on developer-built graphs plus external models and tools"
+  },
+  "explanations": {
+    "agii": {
+      "evidence": "LangGraph is described as a framework for long-running, stateful agents, with durable execution that can resume after failures, a persistence layer that saves graph state as checkpoints at every step of execution, thread-level state retention, short-term and long-term memory, and workflow patterns that explicitly include iterative evaluator-optimizer loops. It also supports subgraphs and orchestrator-worker patterns, including multi-agent use cases where subagents are invoked as tools.",
+      "interpretation": "In Enablement Mode, this is strong evidence that LangGraph materially enables persistent agency: it provides the primitives for cycles, state carryover, resumability, and decomposition into cooperating subagents and workers. However, those behaviors are not instantiated by default; developers must define the graph, routing, memory usage, and stopping criteria.",
+      "implication": "LangGraph meaningfully lowers the engineering barrier to building systems with sustained task pressure and iterative continuation, but the persistence is enabled rather than inherent. That supports a high-but-sub-boundary framework AGII score."
+    },
+    "casx": {
+      "evidence": "The docs position LangGraph as an orchestration layer for agents and workflows, recommend pairing models with tools, show explicit tool binding and tool-calling patterns, and describe multi-agent systems where subagents are invoked as tools. The framework also supports dynamic worker creation and can integrate with LangChain components and deployment and observability infrastructure.",
+      "interpretation": "LangGraph provides substantial enablement for power in action because it can mediate execution pathways between models, tools, workers, and runtime infrastructure. But it does not itself grant real-world access or autonomy; practical action capacity comes from the external tools, APIs, and execution environment that a developer attaches.",
+      "implication": "CASX is elevated because LangGraph is a strong action-enablement substrate, especially for orchestrated tool use and delegated workflows, yet it remains below realized agent systems because action is still contingent on developer configuration and external integrations."
+    },
+    "trajectory": {
+      "evidence": "The official docs emphasize durable execution, human-in-the-loop, comprehensive memory, deployment support, debugging and observability, and explicit patterns for workflows, agents, worker orchestration, and multi-agent subgraphs. The framework is presented as core infrastructure for increasingly sophisticated stateful agent systems.",
+      "interpretation": "The direction of change is toward more capable and more operationally robust agent construction rather than merely prompt chaining. Because the framework sits at the orchestration layer, incremental improvements can compound across many downstream agent deployments.",
+      "implication": "Trajectory is Large: LangGraph is likely to remain an important enabler of stronger agent implementations, but the evidence here does not justify Very Large absent stronger proof that the framework independently instantiates autonomy without substantial developer assembly."
+    }
+  },
+  "change_levers": {
+    "increase_risk": "Adding persistent checkpointers, long-term memory stores, richer tool and API access, dynamic worker delegation, and open-ended loop conditions increases both sustained agency enablement and real-world action pathways.",
+    "decrease_risk": "Restricting tool surfaces, removing or limiting persistence, forcing bounded workflows and explicit termination, and avoiding per-thread stateful subagents reduces both AGII and CASX enablement."
+  },
+  "classification_notes": {
+    "where_risk_determined": "Design, deployment",
+    "where_risk_triggered": "Usage context",
+    "inevitable_under_normal_use": "No — LangGraph enables high-agency patterns, but those require explicit developer configuration of loops, persistence, subagents, and tools"
+  },
+  "sources": [
+    {
+      "title": "LangGraph overview",
+      "url": "https://docs.langchain.com/langgraph/"
+    },
+    {
+      "title": "LangGraph workflows and agents",
+      "url": "https://docs.langchain.com/oss/python/langgraph/workflows-agents"
+    },
+    {
+      "title": "LangGraph persistence",
+      "url": "https://docs.langchain.com/oss/python/langgraph/persistence"
+    },
+    {
+      "title": "LangGraph memory",
+      "url": "https://docs.langchain.com/oss/python/langgraph/add-memory"
+    },
+    {
+      "title": "LangGraph subgraphs",
+      "url": "https://docs.langchain.com/oss/python/langgraph/use-subgraphs"
+    }
+  ],
+  "confidence": "High",
+  "main_uncertainty": "The main uncertainty is how far to credit LangGraph’s deployment and runtime ecosystem versus the core framework itself when scoring CASX; the docs clearly show strong orchestration and tool-enablement, but realized action power still depends heavily on external model and tool configuration and application-specific deployment choices.",
+  "metadata": {
+    "source_markdown_file": "AI Risk Map - LangGraph.md",
+    "version": 1,
+    "created_at": "2026-04-16",
+    "updated_at": "2026-04-16",
+    "tags": [
+      "framework",
+      "orchestration",
+      "langchain",
+      "stateful-agents"
+    ]
+  }
+}

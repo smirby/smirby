@@ -1,0 +1,46 @@
+{
+  "report_metadata": {
+    "report_id": "AI-LNDSCP-2026-001",
+    "timestamp": "2026-04-16T13:18:00Z",
+    "target_persona": "Model Analyst",
+    "scope": "Frontier & Open-Weight Ecosystem"
+  },
+  "model_taxonomy": [
+    {
+      "category": "Reasoning & Logic (System 2)",
+      "description": "Models optimized for step-by-step verification and complex problem-solving.",
+      "entities": [
+        {"provider": "DeepSeek", "model_id": "deepseek-r1", "type": "Open-Weight", "key_feat": "RL-driven chain-of-thought"},
+        {"provider": "OpenAI", "model_id": "o3-pro", "type": "Proprietary", "key_feat": "Advanced scientific reasoning"},
+        {"provider": "Alibaba Cloud", "model_id": "qwq-32b", "type": "Open-Weight", "key_feat": "High-efficiency logic/math"}
+      ]
+    },
+    {
+      "category": "General Purpose & Multimodal (Open Weights)",
+      "description": "SOTA foundational models for local deployment or enterprise fine-tuning.",
+      "entities": [
+        {"provider": "Meta", "model_id": "llama-3.3-70b", "type": "Open-Weight", "key_feat": "Balanced performance-to-compute ratio"},
+        {"provider": "Mistral AI", "model_id": "mistral-large-2", "type": "Open-Weight", "key_feat": "Multilingual and coding excellence"},
+        {"provider": "Microsoft", "model_id": "phi-4", "type": "Open-Weight", "key_feat": "High-quality synthetic data optimization"}
+      ]
+    },
+    {
+      "category": "Agentic Frameworks & Harnesses",
+      "description": "Infrastructure for multi-agent orchestration and tool integration.",
+      "entities": [
+        {"provider": "Anthropic", "framework_id": "MCP", "type": "Open-Standard", "purpose": "Universal data source connectivity"},
+        {"provider": "LangChain", "framework_id": "langgraph", "type": "Library", "purpose": "Stateful, cyclic agent workflows"},
+        {"provider": "CrewAI", "framework_id": "crewai-multiagent", "type": "Orchestrator", "purpose": "Role-based collaborative agents"}
+      ]
+    },
+    {
+      "category": "Niche & Specialty Configurations",
+      "description": "Domain-specific models for specialized enterprise workflows.",
+      "entities": [
+        {"provider": "Anthropic", "model_id": "claude-3-7-sonnet", "type": "Proprietary", "use_case": "Autonomous coding / Computer Use"},
+        {"provider": "Black Forest Labs", "model_id": "flux-1-pro", "type": "Open-Weight", "use_case": "High-fidelity visual synthesis"},
+        {"provider": "Manus AI", "agent_id": "manus-1", "type": "Agent-as-a-Service", "use_case": "End-to-end task automation"}
+      ]
+    }
+  ]
+}

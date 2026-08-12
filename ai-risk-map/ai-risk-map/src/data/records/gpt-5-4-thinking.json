@@ -1,0 +1,83 @@
+{
+  "id": "gpt-5-4-thinking",
+  "name": "GPT-5.4 Thinking",
+  "system_type": "model",
+  "scoring_mode": "realized",
+  "summary": "OpenAI’s frontier reasoning model deployed in ChatGPT and related products for complex reasoning, coding, tool use, and computer-use workflows. It is highly capable and can participate in long multi-step tool trajectories, but documented default deployment remains primarily user-initiated and session-bounded rather than independently persistent over time.",
+  "scores": {
+    "agii": 1.8,
+    "casx": 3.0,
+    "trajectory": "Very Large"
+  },
+  "boundary": "Below boundary",
+  "primary_interpretation": {
+    "driver": "High capability combined with real tool and computer-use access in deployment",
+    "constraint": "Persistence and autonomous continuation are limited and not strongly evidenced as default behavior of the model itself"
+  },
+  "explanations": {
+    "agii": {
+      "evidence": "OpenAI documents GPT-5.4 as improved on long-running task execution and multi-step agent workflows, with built-in computer use, longer trajectories, and better tracking of prior steps. The same documentation frames these primarily as capabilities for agent builders or bounded tool rollouts, not as default recurring or self-initiated operation across time.",
+      "interpretation": "The model shows meaningful within-session persistence, state tracking, and continuation across long trajectories, but the evidence does not show strong realized autonomous persistence such as ongoing self-directed execution, scheduled recurrence by default, or durable goal pursuit without continued user or harness involvement.",
+      "implication": "GPT-5.4 Thinking exerts moderate persistent agency pressure in practice: it can stay on task through extended reasoning and tool loops, but it does not, on current evidence, behave like a strongly persistent autonomous agent by default."
+    },
+    "casx": {
+      "evidence": "OpenAI describes GPT-5.4 as a frontier model for professional work, with strong coding, web/tool use, a 1M-token context window, custom tools, connectors/MCP access, and built-in computer use that can inspect screenshots and return structured actions for a harness to execute. Deployment includes safeguards such as confirmation policies and mediated computer-use execution.",
+      "interpretation": "CASX is high because the system can produce real-world effects through strong general capability plus genuine pathways to action: software interaction, tool calling, connector access, coding, and document/spreadsheet workflows. It is not near-maximal because those effects are usually mediated by product controls, user requests, developer scaffolding, allowed-tools lists, and confirmation gates.",
+      "implication": "In practical deployment, GPT-5.4 Thinking has substantial power in action: it can materially affect digital environments and knowledge work, especially when paired with tools and apps."
+    },
+    "trajectory": {
+      "evidence": "OpenAI positions GPT-5.4 as replacing GPT-5.2, incorporating frontier coding capabilities, expanding tool-heavy and computer-use workflows, and improving long-running trajectories, tool search, context length, and agent performance. The docs describe active rollout across ChatGPT, API, and Codex.",
+      "interpretation": "The direction of change is strongly upward on both capability and deployment breadth. Even if realized persistence remains limited today, the surrounding stack is being optimized for longer, more reliable, more tool-rich workflows.",
+      "implication": "Trajectory is Very Large because near-term iterations are likely to increase practical agency-enabling features and real-world action pathways faster than they increase purely conversational novelty."
+    }
+  },
+  "change_levers": {
+    "increase_risk": "More autonomous orchestration around the model; broader tool/app/write access; reduced confirmation friction; persistent memory and scheduled recurrence tied directly to the model; longer unattended computer-use rollouts; higher-trust deployment in enterprise workflows.",
+    "decrease_risk": "Restrict allowed tools and write actions; strengthen confirmation requirements; narrow deployment scopes; session isolation or temporary chats; limit connector/app permissions; tighten monitoring of long-rollout behavior."
+  },
+  "classification_notes": {
+    "where_risk_determined": "Deployment, with important contributions from model design and training",
+    "where_risk_triggered": "Usage context, especially tool-enabled coding, browsing, connected-app, and computer-use workflows in ChatGPT, API, and Codex",
+    "inevitable_under_normal_use": "Conditional — high CASX is available when the model is given tools, apps, or computer-use pathways, but stronger AGII is not inevitable because default evidence still points to user-directed, bounded execution rather than persistent autonomous continuation"
+  },
+  "sources": [
+    {
+      "title": "GPT-5.4 Thinking System Card",
+      "url": "https://openai.com/index/gpt-5-4-thinking-system-card/"
+    },
+    {
+      "title": "Using GPT-5.4",
+      "url": "https://developers.openai.com/api/docs/guides/latest-model"
+    },
+    {
+      "title": "Introducing GPT-5.4",
+      "url": "https://openai.com/index/introducing-gpt-5-4/"
+    },
+    {
+      "title": "MCP and Connectors",
+      "url": "https://developers.openai.com/api/docs/guides/tools-connectors-mcp"
+    },
+    {
+      "title": "GPT-5.3 and GPT-5.4 in ChatGPT",
+      "url": "https://help.openai.com/en/articles/11909943-gpt-53-and-gpt-54-in-chatgpt"
+    },
+    {
+      "title": "ChatGPT Capabilities Overview",
+      "url": "https://help.openai.com/en/articles/9260256-chatgpt-capabilities-overview"
+    }
+  ],
+  "confidence": "Medium",
+  "main_uncertainty": "How much persistent behavior should be attributed to GPT-5.4 Thinking itself versus the surrounding ChatGPT/API/Codex orchestration layer; public evidence is stronger on long-trajectory and tool use than on default unattended persistence over time.",
+  "metadata": {
+    "source_markdown_file": "AI Risk Map - ChatGPT 5.4.md",
+    "version": 1,
+    "created_at": "2026-04-16",
+    "updated_at": "2026-04-16",
+    "tags": [
+      "frontier-model",
+      "tool-use",
+      "computer-use",
+      "openai"
+    ]
+  }
+}
